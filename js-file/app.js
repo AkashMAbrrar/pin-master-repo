@@ -14,4 +14,13 @@ function genaratePin() {
     const pin = getPin();
     document.getElementById('display-input').value = pin;
 
-}
+};
+
+document.getElementById('key-pad').addEventListener('click', function (event) {
+    const number = event.target.innerText;
+    const calcInput = document.getElementById('typed-numbers');
+    const previousNumber = calcInput.value;
+    const newNumber = previousNumber + number;
+    calcInput.value = newNumber;
+
+})
